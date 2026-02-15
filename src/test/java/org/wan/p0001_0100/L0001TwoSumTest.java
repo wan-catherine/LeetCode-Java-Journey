@@ -6,13 +6,13 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
 
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 class L0001TwoSumTest {
 
     L0001TwoSum twoSun = new L0001TwoSum();
 
-    @ParameterizedTest (name = "nums={0}, target={1}, expected={2}")
+    @ParameterizedTest(name = "nums={0}, target={1}, expected={2}")
     @MethodSource("provideTwoSumTestCases")
     public void twoSumTest(int[] nums, int target, int[] expected) {
         int[] result = twoSun.twoSum(nums, target);
