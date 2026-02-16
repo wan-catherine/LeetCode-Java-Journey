@@ -13,13 +13,13 @@ class L0011ContainerWithMostWaterTest {
     L0011ContainerWithMostWater containerWithMostWater = new L0011ContainerWithMostWater();
 
     @ParameterizedTest
-    @MethodSource("provideTwoSumTestCases")
+    @MethodSource("provideTestCases")
     void maxArea(int[] height, int target) {
         int area = containerWithMostWater.maxArea(height);
         assertEquals(target, area);
     }
 
-    static Stream<Arguments> provideTwoSumTestCases() {
+    static Stream<Arguments> provideTestCases() {
         return Stream.of(
                 Arguments.of(new int[]{1,8,6,2,5,4,8,3,7}, 49),
                 Arguments.of(new int[]{1, 1}, 1)
