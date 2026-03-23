@@ -1,0 +1,22 @@
+package org.wan.p0101_0200;
+
+import java.util.Arrays;
+
+public class L0135Candy {
+    public int candy(int[] ratings) {
+        int len = ratings.length;
+        int[] res = new int[len];
+        Arrays.fill(res, 1);
+        for (int i = 1; i < len; i++) {
+            if (ratings[i] > ratings[i - 1]) {
+                res[i] = res[i - 1] + 1;
+            }
+        }
+        for (int i = len - 2; i >= 0; i--) {
+            if (ratings[i] > ratings[i + 1]) {
+                res[i] = Math.max(res[i], res[i + 1] + 1);
+            }
+        }
+        return Arrays.stream(res).sum();
+    }
+}
