@@ -1,7 +1,6 @@
 package org.wan.p0101_0200;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class L0150EvaluateReversePolishNotation {
     public int evalRPN(String[] tokens) {
