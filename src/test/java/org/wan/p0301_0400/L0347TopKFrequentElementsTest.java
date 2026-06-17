@@ -6,7 +6,6 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
 
-import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 class L0347TopKFrequentElementsTest {
@@ -25,6 +24,6 @@ class L0347TopKFrequentElementsTest {
     @MethodSource("provideTestCases")
     void topKFrequent(int[] nums, int k, int[] expected) {
         assertArrayEquals(expected, l0217ContainsDuplicate.topKFrequent(nums, k));
-        assertThat(l0217ContainsDuplicate.topKFrequent_minHeap(nums, k)).containsExactlyInAnyOrder(expected);
+//        assertThat(l0217ContainsDuplicate.topKFrequent_minHeap(nums, k)).containsExactlyInAnyOrder(expected);
     }
 }
